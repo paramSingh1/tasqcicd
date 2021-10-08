@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
-app.get("/param", () => {
+app.get("/param", (req,res) => {
   res.send("<h1>it actually worked...</h1>");
 });
 // catch 404 and forward to error handler
